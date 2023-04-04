@@ -67,15 +67,6 @@ exports.handler = async (event) => {
     }
   }
 
- 
-
-  // restrict to allow only from same domain host url
-  if (event.headers.appidentifier !== APP_IDENTIFIER) {
-    isValid = false;
-  } else {
-    isValid = true;
-    return sendResonse(isValid);
-  }
 
   return sendResonse(false);
 
